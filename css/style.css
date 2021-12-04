@@ -57,7 +57,7 @@ footer {
 .campo {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid white;
+    border: 2px solid black;
     width: 32rem;
     height: 32rem;
 }
