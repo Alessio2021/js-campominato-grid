@@ -13,29 +13,33 @@ play.addEventListener('click', function(){
     let selectValue = select.value;
     grid.innerHTML = '';
 
-    if (selectValue == 'facile') {
+    switch (selectValue){
+    case 'facile':
         for (let i = 1; i < 100 + 1; i++) {
             const div = document.createElement('div')
             grid.append(div);
             div.classList.add('square');
             div.innerHTML = i;
         }
-    } else if (selectValue == 'medio'){
+        break;
+    case 'medio':
         for (let i = 1; i < 81 + 1; i++) {
             const div = document.createElement('div')
             grid.append(div);
             div.classList.add('square', 'medium');
             div.innerHTML = i;
-
         }
-    } else if (selectValue == 'difficile')
+        break;
+
+    case 'difficile':
         for (let i = 1; i < 49 + 1; i++) {
             const div = document.createElement('div')
             grid.append(div);
             div.classList.add('square', 'hard');
             div.innerHTML = i;
-
         }
+        break;
+    }
     
 
 });
