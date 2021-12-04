@@ -6,23 +6,36 @@
 const select = document.getElementById('select');
 const grid = document.getElementById('grid');
 const play = document.querySelector('.play');
-const div = document.createElement('div')
 
-let numMax = 100;
-let numMin = 1;
 
 
 play.addEventListener('click', function(){
     let selectValue = select.value;
+    grid.innerHTML = '';
 
     if (selectValue == 'facile') {
-        for (let i = 0; i < 100 - 1; i++) {
+        for (let i = 1; i < 100 + 1; i++) {
+            const div = document.createElement('div')
             grid.append(div);
             div.classList.add('square');
+            div.innerHTML = i;
         }
     } else if (selectValue == 'medio'){
+        for (let i = 1; i < 81 + 1; i++) {
+            const div = document.createElement('div')
+            grid.append(div);
+            div.classList.add('square', 'medium');
+            div.innerHTML = i;
 
+        }
     } else if (selectValue == 'difficile')
+        for (let i = 1; i < 49 + 1; i++) {
+            const div = document.createElement('div')
+            grid.append(div);
+            div.classList.add('square', 'hard');
+            div.innerHTML = i;
 
+        }
+    
 
 });

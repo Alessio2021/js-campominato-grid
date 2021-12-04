@@ -63,9 +63,21 @@ footer {
 }
 
 .square {
-    height: 3.2rem;
-    width: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% / 10);
+    width: calc(100% / 10);
     border: 1px solid black;
+}
+
+.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+.hard {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 .flex {
