@@ -80,6 +80,17 @@ footer {
     height: calc(100% / 7);
 }
 
+.clicked {
+    background-color: cornflowerblue;
+}
+
+
+
+
+
+
+
+
 .flex {
   display: flex;
 }

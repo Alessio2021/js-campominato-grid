@@ -17,29 +17,36 @@ play.addEventListener('click', function(){
     case 'facile':
         for (let i = 1; i < 100 + 1; i++) {
             const div = document.createElement('div')
-            grid.append(div);
             div.classList.add('square');
             div.innerHTML = i;
+            grid.append(div);
+            div.addEventListener('click', function () {
+            div.classList.add('clicked');
+            });
         }
         break;
     case 'medio':
         for (let i = 1; i < 81 + 1; i++) {
             const div = document.createElement('div')
-            grid.append(div);
             div.classList.add('square', 'medium');
             div.innerHTML = i;
+            grid.append(div);
+            div.addEventListener('click', function () {
+            div.classList.add('clicked');
+            });
         }
         break;
 
     case 'difficile':
         for (let i = 1; i < 49 + 1; i++) {
             const div = document.createElement('div')
-            grid.append(div);
             div.classList.add('square', 'hard');
             div.innerHTML = i;
+            grid.append(div);
+            div.addEventListener('click', function () {
+            div.classList.add('clicked');
+            });
         }
         break;
     }
-    
-
 });
